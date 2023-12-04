@@ -167,6 +167,6 @@ function intervalToHumanString({
     hour: "numeric",
     minute: "numeric",
     timeZone,
-    timeZoneName: "longGeneric",
+    timeZoneName: "short",
   })}`
 }
