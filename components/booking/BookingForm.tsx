@@ -151,7 +151,7 @@ export default function BookingForm() {
           <button
             type="submit"
             disabled={modal === "busy"}
-            className="inline-flex w-full justify-center rounded-md bg-red-800 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-700 sm:ml-3 sm:w-auto disabled:opacity-50">
+            className="inline-flex w-full justify-center rounded-full bg-am-darkest-blue px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-am-blue-grey sm:ml-3 sm:w-auto disabled:opacity-50">
             {modal === "busy" ? (
               <>
                 Submitting ... <Spinner className="ml-2" />
@@ -162,7 +162,7 @@ export default function BookingForm() {
           </button>
           <button
             type="button"
-            className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
+            className="mt-3 inline-flex w-full justify-center rounded-full bg-am-mid-grey px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-am-mid-grey-light sm:mt-0 sm:w-auto"
             onClick={() => {
               dispatch({ type: "SET_MODAL", payload: "closed" })
             }}>

@@ -42,7 +42,7 @@ export default function DayButton({
       type="button"
       className={twMerge(
         clsx(
-          "p-4 transition-all flex flex-col items-center outline-accent-600 relative",
+          "p-4 transition-all flex flex-col items-center outline-accent-500 relative",
           props.className,
           {
             "font-semibold bg-slate-100  text-slate-800 hocus:border-accent-500 hocus:shadow-sm hocus:shadow-accent-100 hocus:-mt-0.5 hocus:z-10 hocus:mb-0.5 border border-transparent":
