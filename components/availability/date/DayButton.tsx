@@ -48,9 +48,8 @@ export default function DayButton({
             "font-semibold bg-slate-100  text-slate-800 hocus:border-accent-500 hocus:shadow-sm hocus:shadow-accent-100 hocus:-mt-0.5 hocus:z-10 hocus:mb-0.5 border border-transparent":
               !isDisabled,
             "bg-white text-gray-300": isDisabled,
-            "bg-accent-500": isSelected && !isToday,
-            "bg-accent-600 hover:bg-accent-500": isSelected && isToday,
-            "text-white": isSelected,
+            "bg-accent-500 text-slate-800": isSelected && !isToday,
+            "bg-accent-200 hover:bg-accent-300 text-white": isSelected && isToday
           }
         )
       )}
@@ -86,8 +85,8 @@ export default function DayButton({
               <div
                 key={`availability-bar-${index}`}
                 className={clsx("rounded-full w-1 h-1", {
-                  "bg-white": isSelected,
-                  "bg-green-600": !isSelected,
+                  "bg-slate-500": isSelected,
+                  "bg-slate-400": !isSelected,
                 })}
               />
             )

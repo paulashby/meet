@@ -20,7 +20,7 @@ export default function Time({ time: { start, end }, ...props }: TimeProps) {
       className={clsx(
         "rounded-md border-slate-300 border bg-white py-2 px-3 shadow-sm transition-all",
         "text-sm font-semibold text-gray-900",
-        "hocus:bg-accent-50/20 hocus:shadow-sm hocus:shadow-accent-100 hocus:-mt-0.5 hocus:mb-0.5 hocus:border-accent-500",
+        "hocus:bg-slate-100 hocus:shadow-sm hocus:shadow-accent-100 hocus:-mt-0.5 hocus:mb-0.5 hocus:border-am-mid-grey-light",
         "active:mt-0.5 active:-mb-0.5  outline-accent-500"
       )}
       onClick={() => {
