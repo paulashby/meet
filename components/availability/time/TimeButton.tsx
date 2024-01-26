@@ -14,6 +14,11 @@ export default function Time({ time: { start, end }, ...props }: TimeProps) {
     state: { timeZone },
     dispatch,
   } = useProvider()
+
+  console.log("typeof start is ", typeof start);
+  console.log(start);
+  
+  
   return (
     <button
       type="button"
