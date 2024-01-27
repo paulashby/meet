@@ -147,11 +147,11 @@ export default function BookingForm() {
             There was an error submitting your request.
           </div>
         )}
-        <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
+        <div className="mt-5 sm:mt-4 sm:flex sm:flex-row justify-end">
           <button
             type="submit"
             disabled={modal === "busy"}
-            className="inline-flex justify-center rounded-full bg-am-darkest-blue mr-2 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-am-blue-grey sm:mr-0 sm:ml-2 sm:w-auto disabled:opacity-50">
+            className="inline-flex justify-center rounded-full bg-am-darkest-blue px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-am-blue-grey sm:mr-0 sm:ml-2 sm:w-auto disabled:opacity-50">
             {modal === "busy" ? (
               <>
                 Submitting ... <Spinner className="ml-2" />
@@ -162,7 +162,7 @@ export default function BookingForm() {
           </button>
           <button
             type="button"
-            className="mt-3 inline-flex justify-center rounded-full bg-am-mid-grey px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-am-mid-grey-light sm:mt-0 sm:w-auto"
+            className="mt-3 inline-flex justify-center rounded-full bg-am-mid-grey ml-2 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-am-mid-grey-light sm:mt-0 sm:w-auto"
             onClick={() => {
               dispatch({ type: "SET_MODAL", payload: "closed" })
             }}>
