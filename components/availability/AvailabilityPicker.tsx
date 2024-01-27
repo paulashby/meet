@@ -13,6 +13,8 @@ import format from "date-fns-tz/format"
 const Calendar = dynamic(() => import("./date/Calendar"), { ssr: false })
 const TimeList = dynamic(() => import("./time/TimeList"), { ssr: false })
 
+const TimeSelect = dynamic(() => import("./time/TimeSelect"), { ssr: false })
+
 type AvailabilityPickerProps = {
   slots: DateTimeInterval[]
 }
@@ -55,7 +57,8 @@ export default function AvailabilityPicker({ slots }: AvailabilityPickerProps) {
         offers={availabilityByDate}
         maximumAvailability={maximumAvailability}
       />
-      <TimeList availability={availability} />
+      {/* <TimeList availability={availability} /> */}
+      <TimeSelect availability={availability} />
     </div>
   )
 }
