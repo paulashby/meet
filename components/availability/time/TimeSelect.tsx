@@ -4,8 +4,7 @@ import type { DateTimeInterval } from "@/lib/types"
 import Select from "react-select";
 
 type TimeSelectProps = {
-  availability: DateTimeInterval[],
-  time: DateTimeInterval
+  availability: DateTimeInterval[]
 }
 
 export default function TimeSelect({ availability }: TimeSelectProps) {
