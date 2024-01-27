@@ -27,7 +27,8 @@ export default function TimeSelect({ availability }: TimeSelectProps) {
             placeholder="Choose a time slot"
             className={"w-52 block"}
             menuPlacement="auto"
-            minMenuHeight={300}
+            minMenuHeight={550}
+            maxMenuHeight={550}
             onChange={(slot) => {
                 if (slot) {
                     const start = slot.value.start;
