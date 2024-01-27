@@ -75,7 +75,7 @@ function Page({
   }, [])
 
   return (
-    <main className="max-w-2xl sm:mx-auto mx-4 pb-24">
+    <main className="max-w-2xl sm:mx-auto mx-4">
       <Template />
       <AvailabilityPicker slots={slots} />
     </main>

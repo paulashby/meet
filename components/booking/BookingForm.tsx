@@ -147,7 +147,7 @@ export default function BookingForm() {
             There was an error submitting your request.
           </div>
         )}
-        <div className="mt-5 sm:mt-4 sm:flex sm:flex-row justify-end">
+        <div className="mt-5 sm:mt-4 flex flex-row justify-end items-start">
           <button
             type="submit"
             disabled={modal === "busy"}
@@ -162,7 +162,7 @@ export default function BookingForm() {
           </button>
           <button
             type="button"
-            className="mt-3 inline-flex justify-center rounded-full bg-am-mid-grey ml-2 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-am-mid-grey-light sm:mt-0 sm:w-auto"
+            className="inline-flex justify-center rounded-full bg-am-mid-grey ml-2 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-am-mid-grey-light sm:mt-0 sm:w-auto"
             onClick={() => {
               dispatch({ type: "SET_MODAL", payload: "closed" })
             }}>
