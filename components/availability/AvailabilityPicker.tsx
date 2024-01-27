@@ -49,7 +49,6 @@ export default function AvailabilityPicker({ slots }: AvailabilityPickerProps) {
   return (
     <div className="flex flex-col space-y-8">
       <div className="flex space-x-6">
-        {/* <DurationPicker /> */}
         <TimezonePicker />
       </div>
       <BookingForm />
@@ -57,7 +56,6 @@ export default function AvailabilityPicker({ slots }: AvailabilityPickerProps) {
         offers={availabilityByDate}
         maximumAvailability={maximumAvailability}
       />
-      {/* <TimeList availability={availability} /> */}
       <TimeSelect availability={availability} />
     </div>
   )
