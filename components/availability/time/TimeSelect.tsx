@@ -55,19 +55,23 @@ export default function TimeSelect({ availability }: TimeSelectProps) {
                     "&:before": {
                         content: "''",
                         position: "absolute",
-                        left: "-10rem",
-                        right: "-10rem",
-                        top: "-10rem",
-                        bottom: "-10rem",
+                        left: "-4.3rem",
+                        right: "-4.3rem",
+                        top: "-35rem",
+                        bottom: "-4rem",
                         backgroundColor: "rgba(255, 255, 255, 0.7)",
                         zIndex: "-1",
                         pointerEvents: "none",
                     },
                 }),
+                menuList: (baseStyles) => ({
+                    ...baseStyles,
+                    border: "1px solid #ddd",
+                }),
                 option: (baseStyles, state) => ({
                     ...baseStyles,
                     fontSize: "0.95rem",
-                    fontWeight: "700",
+                    fontWeight: "500",
                     padding: "0.24rem 2rem",
                 }),
                 placeholder: (defaultStyles) => {
