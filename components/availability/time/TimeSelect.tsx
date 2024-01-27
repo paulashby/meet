@@ -39,6 +39,13 @@ export default function TimeSelect({ availability }: TimeSelectProps) {
                     })
                 }                
             }}
+            styles={{
+                option: (baseStyles, state) => ({
+                    ...baseStyles,
+                    fontSize: "0.975rem",
+                    padding: "0.325rem 1rem"
+                }),
+            }}
         />
       </div>
     )
