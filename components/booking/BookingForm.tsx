@@ -11,10 +11,6 @@ import { formatLocalDate, formatLocalTime } from "@/lib/availability/helpers"
 
 const locations = [
   {
-    name: "Phone",
-    value: "phone",
-  },
-  {
     name: "Google Meet",
     value: "meet",
   },
@@ -116,6 +112,7 @@ export default function BookingForm() {
               />
             </div>
           </div>
+          {locations.length > 1 &&
           <div>
             <p className="text-sm font-medium">How would you like to meet?</p>
             <fieldset className="mt-2">
@@ -141,6 +138,7 @@ export default function BookingForm() {
               </div>
             </fieldset>
           </div>
+          }
         </div>
         {modal === "error" && (
           <div className="bg-red-50 text-red-600">
