@@ -5,6 +5,8 @@ export default function ApprovalEmail({
   email,
   name,
   location,
+  subject,
+  message,
   dateSummary,
   approveUrl,
   timeZone,
@@ -13,10 +15,13 @@ export default function ApprovalEmail({
   email: string
   name: string
   location: string
+  subject: string
+  message: string
   approveUrl: string
   timeZone: string
 }) {
-  const SUBJECT = `${name} wants to meet with you`
+  const SUBJECT = `${name} wants to meet with you to discuss ${subject}`
+  const MESSAGE = message.length ? [`They provided the following message:`, message, `<br>`] : []
 
   const declineUrl = `mailto:${encodeURI(email)}?subject=${encodeURIComponent(
     `Re: Your meeting request`
@@ -30,10 +35,11 @@ Would you be able to meet at a different time?`
 
   let body = `<div dir="ltr">`
   body += [
-    `<b>${name}</b> has requested a meeting on <b>${dateSummary}</b>, via <b>${location}</b>`,
+    `<b>${name}</b> has requested a meeting on <b>${dateSummary}</b>`,
     `<br>`,
     `Their local timezone is ${timeZone}`,
     `<br>`,
+    ...MESSAGE,
     `<br>`,
     `<b><a href=${approveUrl}>Accept the meeting</a></b>`,
     `<br>`,

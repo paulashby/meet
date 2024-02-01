@@ -19,7 +19,7 @@ const REQUESTS_PER_IP_PER_MINUTE_LIMIT = 5
 
 // Define the schema for the request body
 const AppointmentRequestSchema = z.object({
-  concerning: z.enum(["integration", "institutional", "other"]),
+  subject: z.enum(["Platform Integration", "Institutional API", "other"]),
   name: z.string(),
   email: z.string().email(),
   message: z.string(),
@@ -84,6 +84,7 @@ export default async function handler(
       timeZone: OWNER_TIMEZONE,
     }),
   })
+
   await sendMail({
     to: process.env.OWNER_EMAIL ?? "",
     subject: approveEmail.subject,
