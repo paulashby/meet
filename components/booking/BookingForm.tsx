@@ -177,7 +177,7 @@ export default function BookingForm() {
           <button
             type="submit"
             disabled={modal === "busy"}
-            className="inline-flex justify-center rounded-md bg-am-darkest-blue px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-am-blue-grey sm:mr-0 sm:ml-2 sm:w-auto disabled:opacity-50">
+            className="inline-flex justify-center rounded-md bg-am-red px-3 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-80 sm:mr-0 sm:ml-2 sm:w-auto disabled:opacity-50">
             {modal === "busy" ? (
               <>
                 Submitting ... <Spinner className="ml-2" />
