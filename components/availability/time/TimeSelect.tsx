@@ -47,13 +47,12 @@ export default function TimeSelect({ availability }: TimeSelectProps) {
                 control: (baseStyles, { isFocused }) => ({
                     ...baseStyles,
                     position: "relative",
-                    color: "green",
                     zIndex: "2",
                     boxShadow: "none",
-                    border: isFocused ? "2px solid rgb(98, 119, 134)" : "1 px rgb(209 213 219)",
                     ":hover": {
-                        borderColor: "rgb(98, 119, 134)",
-                    }
+                        borderColor: isFocused ? "rgb(98, 119, 134)" : "rgb(209 213 219)",
+                    },
+                    border: isFocused ? "2px solid rgb(98, 119, 134)" : "1 px rgb(209 213 219)"
                 }),
                 menu: (baseStyles, state) => ({
                     ...baseStyles,
