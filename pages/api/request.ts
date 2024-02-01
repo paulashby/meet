@@ -19,8 +19,10 @@ const REQUESTS_PER_IP_PER_MINUTE_LIMIT = 5
 
 // Define the schema for the request body
 const AppointmentRequestSchema = z.object({
+  subject: z.enum(["Platform Integration", "Institutional API", "other"]),
   name: z.string(),
   email: z.string().email(),
+  message: z.string(),
   start: z.string().refine((value) => !Number.isNaN(Date.parse(value)), {
     message: "Start must be a valid date.",
   }),
@@ -28,7 +30,7 @@ const AppointmentRequestSchema = z.object({
     message: "End must be a valid date.",
   }),
   timeZone: z.string(),
-  location: z.enum(["meet", "phone"]),
+  location: z.enum(["meet"]),
   duration: z
     .string()
     .refine((value) => !Number.isNaN(Number.parseInt(value)), {
@@ -82,6 +84,7 @@ export default async function handler(
       timeZone: OWNER_TIMEZONE,
     }),
   })
+
   await sendMail({
     to: process.env.OWNER_EMAIL ?? "",
     subject: approveEmail.subject,

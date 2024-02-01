@@ -11,10 +11,6 @@ import { formatLocalDate, formatLocalTime } from "@/lib/availability/helpers"
 
 const locations = [
   {
-    name: "Phone",
-    value: "phone",
-  },
-  {
     name: "Google Meet",
     value: "meet",
   },
@@ -76,8 +72,24 @@ export default function BookingForm() {
             {startString} - {endString}
           </p>
         </div>
-
         <div className="flex flex-col space-y-4">
+          <div className="flex-grow">
+            <label
+              htmlFor="subject"
+              className="block text-sm font-medium leading-0 text-gray-900">
+              To discuss
+            </label>
+            <select
+              required
+              id="subject"
+              name="subject"
+              defaultValue={"Please Choose..."}
+              className="mt-1 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-accent-600 sm:text-sm sm:leading-6 overflow-x-clip">
+              <option value="Platform Integration">Platform Integration</option>
+              <option value="Institutional API">Institutional API</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
           <div className="isolate -space-y-px rounded-md shadow-sm">
             <div className="relative rounded-md rounded-b-none px-3 pt-2.5 pb-1.5 ring-1 ring-inset ring-gray-300 focus-within:z-10 focus-within:ring-2 focus-within:ring-accent-600">
               <label
@@ -98,7 +110,8 @@ export default function BookingForm() {
                 placeholder="Jane Smith"
               />
             </div>
-            <div className="relative rounded-md rounded-t-none px-3 pt-2.5 pb-1.5 ring-1 ring-inset ring-gray-300 focus-within:z-10 focus-within:ring-2 focus-within:ring-accent-600">
+            <div
+              className="relative px-3 pt-2.5 pb-1.5 ring-1 ring-inset ring-gray-300 focus-within:z-10 focus-within:ring-2 focus-within:ring-accent-600">
               <label
                 htmlFor="email"
                 className="block text-xs font-medium text-gray-900">
@@ -115,8 +128,21 @@ export default function BookingForm() {
                 placeholder="jsmith@gmail.com"
               />
             </div>
+            <div className="relative rounded-md rounded-t-none px-3 pt-2.5 pb-1.5 ring-1 ring-inset ring-gray-300 focus-within:z-10 focus-within:ring-2 focus-within:ring-accent-600">
+              <label
+                htmlFor="message"
+                className="block text-xs font-medium text-gray-900">
+                Message:
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                className="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                >
+              </textarea>
+            </div>
           </div>
-          <div>
+          <div className={locations.length === 1 ? "hidden" : ""}>
             <p className="text-sm font-medium">How would you like to meet?</p>
             <fieldset className="mt-2">
               <div className="space-y-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-4">
@@ -137,7 +163,7 @@ export default function BookingForm() {
                       {location.name}
                     </label>
                   </div>
-                ))}
+                  ))}
               </div>
             </fieldset>
           </div>

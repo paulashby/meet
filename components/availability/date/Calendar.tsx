@@ -21,6 +21,7 @@ export default function Calendar({
   const { start: startDate, end: endDate } = getDateRangeInterval({
     start,
     end,
+    timeZone: "Etc/GMT",
   })
 
   // Handles when the date changes due to the selected timezone
