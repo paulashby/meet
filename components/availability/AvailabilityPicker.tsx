@@ -2,8 +2,6 @@ import { utcToZonedTime } from "date-fns-tz"
 import dynamic from "next/dynamic"
 
 import BookingForm from "../booking/BookingForm"
-// import DurationPicker from "./controls/DurationPicker"
-import TimezonePicker from "./controls/TimezonePicker"
 import { useProvider } from "@/context/AvailabilityContext"
 import type { DateTimeInterval } from "@/lib/types"
 import format from "date-fns-tz/format"
@@ -48,9 +46,6 @@ export default function AvailabilityPicker({ slots }: AvailabilityPickerProps) {
 
   return (
     <div className="flex flex-col space-y-8">
-      <div className="flex space-x-6">
-        <TimezonePicker />
-      </div>
       <BookingForm />
       <Calendar
         offers={availabilityByDate}
