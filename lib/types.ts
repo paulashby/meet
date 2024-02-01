@@ -58,6 +58,8 @@ export type AppointmentProps = {
   end: string
   /** Meeting title */
   summary: string
+  /** Message from user */
+  message: string
   /** Email address of the requester. */
   email: string
   /** Location of the meeting. */

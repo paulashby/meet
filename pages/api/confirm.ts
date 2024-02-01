@@ -5,12 +5,14 @@ import createCalendarAppointment from "@/lib/availability/createAppointment"
 import getHash from "@/lib/hash"
 
 const AppointmentPropsSchema = z.object({
+  subject: z.enum(["Platform Integration", "Institutional API", "other"]),
   name: z.string(),
   email: z.string().email(),
+  message: z.string(),
   start: z.string(),
   end: z.string(),
   timeZone: z.string(),
-  location: z.enum(["meet", "phone"]),
+  location: z.enum(["meet"]),
   duration: z
     .string()
     .refine((value) => !Number.isNaN(Number.parseInt(value)), {
@@ -66,7 +68,7 @@ export default async function handler(
   const response = await createCalendarAppointment({
     ...validObject,
     requestId: hash,
-    summary: `${validObject.duration} minute meeting with ${process.env.NEXT_PUBLIC_OWNER_NAME ?? "me"}`,
+    summary: `${validObject.duration} minute meeting with ${process.env.NEXT_PUBLIC_OWNER_NAME ?? "me"} re ${validObject.subject}`,
   })
 
   const details = await response.json()
