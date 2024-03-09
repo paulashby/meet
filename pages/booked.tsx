@@ -8,16 +8,16 @@ export default function Booked() {
   }
   return (
     <div className="py-8 sm:py-16 mx-auto max-w-xl">
-      <h1 className="text-3xl font-bold tracking-tight text-accent-700">
+      <h1 className="text-3xl font-bold tracking-tight text-white">
         The appointment has been confirmed.
       </h1>
-      <p className="mt-6 text-xl text-gray-800 font-medium">
+      <p className="mt-6 text-xl text-white font-medium">
         It’s now on your calendar and an invite has been sent to them.{" "}
         <a
           href={"https://www.google.com/calendar/event?eid=" + query.url}
           target="_blank"
           rel="noreferrer"
-          className="text-blue-700 underline">
+          className="text-accent-500 underline">
           View it on Google Calendar
         </a>
       </p>
