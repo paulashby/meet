@@ -14,5 +14,5 @@ body {
   @apply antialiased scroll-smooth;
   text-rendering: optimizeLegibility;
   font-family: Lato;
-  background-color: #fff;
+  background-color: #303030;
 }

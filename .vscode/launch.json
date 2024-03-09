@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "node-terminal",
+            "name": "Run Script: dev",
+            "request": "launch",
+            "command": "pnpm run dev",
+            "cwd": "${workspaceFolder}",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js"
+              ]
+        }
+    ]
+}

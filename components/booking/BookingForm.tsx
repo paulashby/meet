@@ -47,7 +47,7 @@ export default function BookingForm() {
         }}>
         <Dialog.Title
           as="h3"
-          className="text-base font-semibold leading-6 text-gray-900">
+          className="text-base font-semibold leading-6 text-white">
           Request appointment
         </Dialog.Title>
 
@@ -64,7 +64,7 @@ export default function BookingForm() {
         <input type="hidden" name="duration" value={duration} />
         <input type="hidden" name="timeZone" value={timeZone} />
 
-        <div className="border-l-4 border-l-accent-200 bg-accent-50/30 p-3 mt-3 mb-4 rounded-md">
+        <div className="border-l-4 border-l-accent-500 bg-white p-3 mt-3 mb-4 rounded-md">
           <p className="text-sm md:text-base font-semibold text-accent-800">
             {dateString}
           </p>
@@ -76,7 +76,7 @@ export default function BookingForm() {
           <div className="flex-grow">
             <label
               htmlFor="subject"
-              className="block text-sm font-medium leading-0 text-gray-900">
+              className="block text-sm font-medium leading-0 text-white">
               To discuss
             </label>
             <select
@@ -91,7 +91,7 @@ export default function BookingForm() {
             </select>
           </div>
           <div className="isolate -space-y-px rounded-md shadow-sm">
-            <div className="relative rounded-md rounded-b-none px-3 pt-2.5 pb-1.5 ring-1 ring-inset ring-gray-300 focus-within:z-10 focus-within:ring-2 focus-within:ring-accent-600">
+            <div className="relative bg-white rounded-md rounded-b-none px-3 pt-2.5 pb-1.5 ring-1 ring-inset ring-gray-300 focus-within:z-10 focus-within:ring-2 focus-within:ring-accent-600">
               <label
                 htmlFor="name"
                 className="block text-xs font-medium text-gray-900">
@@ -111,7 +111,7 @@ export default function BookingForm() {
               />
             </div>
             <div
-              className="relative px-3 pt-2.5 pb-1.5 ring-1 ring-inset ring-gray-300 focus-within:z-10 focus-within:ring-2 focus-within:ring-accent-600">
+              className="relative bg-white px-3 pt-2.5 pb-1.5 ring-1 ring-inset ring-gray-300 focus-within:z-10 focus-within:ring-2 focus-within:ring-accent-600">
               <label
                 htmlFor="email"
                 className="block text-xs font-medium text-gray-900">
@@ -128,7 +128,7 @@ export default function BookingForm() {
                 placeholder="jsmith@gmail.com"
               />
             </div>
-            <div className="relative rounded-md rounded-t-none px-3 pt-2.5 pb-1.5 ring-1 ring-inset ring-gray-300 focus-within:z-10 focus-within:ring-2 focus-within:ring-accent-600">
+            <div className="relative bg-white rounded-md rounded-t-none px-3 pt-2.5 pb-1.5 ring-1 ring-inset ring-gray-300 focus-within:z-10 focus-within:ring-2 focus-within:ring-accent-600">
               <label
                 htmlFor="message"
                 className="block text-xs font-medium text-gray-900">

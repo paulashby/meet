@@ -1,6 +1,7 @@
 import { useProvider } from "@/context/AvailabilityContext"
 import { formatLocalTime } from "@/lib/availability/helpers"
 import type { DateTimeInterval } from "@/lib/types"
+import { redirect } from "next/dist/server/api-utils";
 import Select from "react-select";
 
 type TimeSelectProps = {
@@ -20,7 +21,7 @@ export default function TimeSelect({ availability }: TimeSelectProps) {
                 const startStr = formatLocalTime(slot.start, {timeZone});
                 const endStr = formatLocalTime(slot.end, {timeZone});
                 return {
-                    value: slot, 
+                    value: slot,
                     label: `${startStr} – ${endStr}`
                 }
             })}
@@ -37,7 +38,7 @@ export default function TimeSelect({ availability }: TimeSelectProps) {
                         type: "SET_SELECTED_TIME",
                         payload: { start, end },
                     })
-                }                
+                }
             }}
             styles={{
                 container: (baseStyles, state) => ({
@@ -57,6 +58,7 @@ export default function TimeSelect({ availability }: TimeSelectProps) {
                 menu: (baseStyles, state) => ({
                     ...baseStyles,
                     width: "10.25rem",
+                    backgroundColor: "#fff",
                     "&:before": {
                         content: "''",
                         position: "absolute",
@@ -64,7 +66,7 @@ export default function TimeSelect({ availability }: TimeSelectProps) {
                         right: "-4.3rem",
                         top: "-35rem",
                         bottom: "-4rem",
-                        backgroundColor: "rgba(255, 255, 255, 0.7)",
+                        backgroundColor: "rgba(0, 0, 0, 0.5)",
                         zIndex: "-1",
                         pointerEvents: "none",
                     },
@@ -72,6 +74,7 @@ export default function TimeSelect({ availability }: TimeSelectProps) {
                 menuList: (baseStyles) => ({
                     ...baseStyles,
                     border: "1px solid #ddd",
+                    backgroundColor: "#fff"
                 }),
                 option: (baseStyles, state) => ({
                     ...baseStyles,

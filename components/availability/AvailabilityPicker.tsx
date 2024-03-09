@@ -45,7 +45,7 @@ export default function AvailabilityPicker({ slots }: AvailabilityPickerProps) {
     : []
 
   return (
-    <div className="flex flex-col space-y-8">
+    <div className="flex flex-col space-y-8 bg-am-dark-grey">
       <BookingForm />
       <Calendar
         offers={availabilityByDate}
