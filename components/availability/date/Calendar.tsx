@@ -58,7 +58,7 @@ export default function Calendar({
       {weekdays.map((weekday) => (
         <div
           key={weekday}
-          className="justify-center text-slate-500 flex"
+          className="justify-center text-gray-400 flex"
           role="columnheader"
           aria-label={weekday}>
           {weekday.charAt(0)}

@@ -45,9 +45,9 @@ export default function DayButton({
           "p-4 transition-all flex flex-col items-center outline-accent-500 relative",
           props.className,
           {
-            "font-semibold bg-slate-100  text-slate-800 hocus:border-accent-500 hocus:shadow-sm hocus:shadow-accent-100 hocus:-mt-0.5 hocus:z-10 hocus:mb-0.5 border border-transparent":
+            "font-semibold bg-am-dark-mid-grey text-gray-300 hocus:border-accent-500 hocus:shadow-sm hocus:shadow-accent-100 hocus:-mt-0.5 hocus:z-10 hocus:mb-0.5 border border-transparent":
               !isDisabled,
-            "bg-white text-gray-300": isDisabled,
+            "bg-am-dark-grey text-gray-500": isDisabled,
             "bg-accent-500 text-slate-800": isSelected && !isToday,
             "bg-accent-200 hover:bg-accent-300 text-white": isSelected && isToday
           }
@@ -70,7 +70,7 @@ export default function DayButton({
         <p
           className={clsx(
             "font-semibold text-[0.55rem] leading-0 h-3 items-center flex",
-            { "text-white": isSelected, "text-accent-700": !isSelected }
+            { "text-white": isSelected, "text-accent-500": !isSelected }
           )}>
           {isToday && "TODAY"}
         </p>

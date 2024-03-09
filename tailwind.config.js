@@ -11,9 +11,13 @@ module.exports = {
       colors: {
           "am-darkest-blue": "#10121B",
           "am-blue-grey": "#393e5f",
-          "am-mid-grey": "#627786",
           "am-mid-grey-light": "#708899",
-          "am-red": "#FF2F66",
+          "am-dark-mid-grey": "#393939",
+
+          "am-teal": "#66fcf1",
+          "am-dark-grey": "#303030",
+          "am-mid-grey": "#627786",
+          "am-red": "#ff2f66",
         accent: {
           50: "#b0b2b5",
           100: "#394451",
