@@ -62,10 +62,10 @@ export default function TimeSelect({ availability }: TimeSelectProps) {
                     "&:before": {
                         content: "''",
                         position: "absolute",
-                        left: "-7rem",
-                        right: "-7rem",
+                        left: "-5.96rem",
+                        right: "-6.25rem",
                         top: "-35rem",
-                        bottom: "-4rem",
+                        bottom: "-4.45rem",
                         backgroundColor: "rgba(0, 0, 0, 0.5)",
                         zIndex: "-1",
                         pointerEvents: "none",
