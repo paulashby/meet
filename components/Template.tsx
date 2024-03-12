@@ -1,6 +1,6 @@
 export default function Template() {
   return (
-    <div className="pt-4 sm:pt-8 pb-4 sm:pb-16">
+    <div className="pt-6 sm:pt-8 pb-4 sm:pb-16">
       <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
         Let&apos;s talk!
       </h1>
